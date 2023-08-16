@@ -1,4 +1,4 @@
-# OpenTweet
+# OpenFoods
 
 👋 Hi! Welcome to your iOS coding excercise.
 
