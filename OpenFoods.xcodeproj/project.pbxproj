@@ -12,6 +12,11 @@
 		009C4C711D9F0CD600F0BC6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009C4C6F1D9F0CD600F0BC6C /* Main.storyboard */; };
 		009C4C731D9F0CD600F0BC6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 009C4C721D9F0CD600F0BC6C /* Assets.xcassets */; };
 		009C4C761D9F0CD600F0BC6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 009C4C741D9F0CD600F0BC6C /* LaunchScreen.storyboard */; };
+		94710F862A8E381E00CEBC8B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94710F852A8E381E00CEBC8B /* Repository.swift */; };
+		94710F882A8E390D00CEBC8B /* FoodClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94710F872A8E390D00CEBC8B /* FoodClass.swift */; };
+		94710F8C2A8E4B8C00CEBC8B /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94710F8B2A8E4B8C00CEBC8B /* UIViewExtensions.swift */; };
+		94710F8E2A8E4DB400CEBC8B /* OpenFoodCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94710F8D2A8E4DB400CEBC8B /* OpenFoodCell.xib */; };
+		94710F902A8E4DE000CEBC8B /* OpenFoodCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94710F8F2A8E4DE000CEBC8B /* OpenFoodCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		009C4C751D9F0CD600F0BC6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		009C4C771D9F0CD600F0BC6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		009C4C9D1D9F104800F0BC6C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		94710F852A8E381E00CEBC8B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		94710F872A8E390D00CEBC8B /* FoodClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodClass.swift; sourceTree = "<group>"; };
+		94710F8B2A8E4B8C00CEBC8B /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		94710F8D2A8E4DB400CEBC8B /* OpenFoodCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenFoodCell.xib; sourceTree = "<group>"; };
+		94710F8F2A8E4DE000CEBC8B /* OpenFoodCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFoodCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +68,15 @@
 			children = (
 				009C4C6B1D9F0CD600F0BC6C /* AppDelegate.swift */,
 				009C4C6D1D9F0CD600F0BC6C /* ViewController.swift */,
+				94710F852A8E381E00CEBC8B /* Repository.swift */,
 				009C4C6F1D9F0CD600F0BC6C /* Main.storyboard */,
 				009C4C741D9F0CD600F0BC6C /* LaunchScreen.storyboard */,
 				009C4C721D9F0CD600F0BC6C /* Assets.xcassets */,
 				009C4C771D9F0CD600F0BC6C /* Info.plist */,
+				94710F872A8E390D00CEBC8B /* FoodClass.swift */,
+				94710F8B2A8E4B8C00CEBC8B /* UIViewExtensions.swift */,
+				94710F8D2A8E4DB400CEBC8B /* OpenFoodCell.xib */,
+				94710F8F2A8E4DE000CEBC8B /* OpenFoodCell.swift */,
 			);
 			path = OpenFoods;
 			sourceTree = "<group>";
@@ -130,6 +145,7 @@
 				009C4C761D9F0CD600F0BC6C /* LaunchScreen.storyboard in Resources */,
 				009C4C731D9F0CD600F0BC6C /* Assets.xcassets in Resources */,
 				009C4C711D9F0CD600F0BC6C /* Main.storyboard in Resources */,
+				94710F8E2A8E4DB400CEBC8B /* OpenFoodCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,8 +156,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94710F882A8E390D00CEBC8B /* FoodClass.swift in Sources */,
+				94710F902A8E4DE000CEBC8B /* OpenFoodCell.swift in Sources */,
+				94710F8C2A8E4B8C00CEBC8B /* UIViewExtensions.swift in Sources */,
 				009C4C6E1D9F0CD600F0BC6C /* ViewController.swift in Sources */,
 				009C4C6C1D9F0CD600F0BC6C /* AppDelegate.swift in Sources */,
+				94710F862A8E381E00CEBC8B /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
