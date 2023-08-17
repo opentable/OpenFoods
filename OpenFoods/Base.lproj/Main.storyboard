@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="afx-S9-oy5">
+                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="afx-S9-oy5">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qye-bF-6BA">
@@ -28,30 +28,28 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="LOH-0w-vCl">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T4d-s1-1E9"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="LOH-0w-vCl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MPb-wq-9h9"/>
+                            <constraint firstItem="LOH-0w-vCl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xs3-Nq-8GN"/>
                             <constraint firstItem="T4d-s1-1E9" firstAttribute="bottom" secondItem="afx-S9-oy5" secondAttribute="bottom" id="hD5-2g-wWE"/>
                             <constraint firstItem="afx-S9-oy5" firstAttribute="leading" secondItem="T4d-s1-1E9" secondAttribute="leading" id="ils-d9-l7d"/>
                             <constraint firstItem="afx-S9-oy5" firstAttribute="top" secondItem="T4d-s1-1E9" secondAttribute="top" id="sLc-jU-mzy"/>
                             <constraint firstItem="T4d-s1-1E9" firstAttribute="trailing" secondItem="afx-S9-oy5" secondAttribute="trailing" id="xlq-Kj-A7K"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="8GP-8o-1DE" appends="YES" id="5CG-wn-fRm"/>
-                        </connections>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="LOH-0w-vCl" id="OHj-c7-CHL"/>
                         <outlet property="collectionView" destination="afx-S9-oy5" id="7FL-QV-Wp5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="8GP-8o-1DE">
-                    <connections>
-                        <action selector="onTap:" destination="BYZ-38-t0r" id="iTL-DD-US3"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="139" y="19"/>
         </scene>

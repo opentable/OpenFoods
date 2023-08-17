@@ -11,9 +11,9 @@ import Foundation
 public struct Food: Decodable {
     let id: Int
     let name: String
-    let isLiked: Bool
+    var isLiked: Bool
     let photoURL: URL?
     let description: String
     let countryOfOrigin: String
-    let lastUpdatedDate: Date
+    var lastUpdatedDate: Date
 }
