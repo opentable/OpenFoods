@@ -76,10 +76,20 @@ This API will give you a list of foods. Sometimes this service can take awhile t
 
 ### Like
 
-You can `PUT` a like to `/v1/food/<id>/like` to set `isLiked` to `true` and update `lastUpdatedDate` to now.  This service _usually_ works but can throw errors sometimes.
+You can `PUT` a like to `/v1/food/<id>/like` to set `isLiked` to `true` and update `lastUpdatedDate` to now. This service _usually_ works but can throw errors sometimes. If the food has been succesffuly updated the value of `success` will be `true`
+
+```json
+{"success": true}
+```
 
 ### Unlike
 
-You can `PUT` an unlike to `/v1/food/<id>/unlike` to set `isLiked` to `false` and update `lastUpdatedDate` to now.  This service _usually_ works but can throw errors sometimes.
+You can `PUT` an unlike to `/v1/food/<id>/unlike` to set `isLiked` to `false` and update `lastUpdatedDate` to now. This service _usually_ works but can throw errors sometimes. If the food has been succesffuly updated the value of `success` will be `true`
+
+```json
+{"success": true}
+```
+
+## Fin
 
 Happy coding!
