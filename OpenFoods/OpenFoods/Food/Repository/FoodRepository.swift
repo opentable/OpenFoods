@@ -36,6 +36,7 @@ class FoodRepository: ObservableObject {
         // Published properties must be updated on the main thread.
         await MainActor.run {
           self.state = .loaded(food: food)
+          print(food)
         }
       } catch {
         await MainActor.run {

@@ -19,6 +19,7 @@
 		794527BB2A979D0F00AF31E8 /* FoodAPIRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527BA2A979D0F00AF31E8 /* FoodAPIRepresentation.swift */; };
 		794527BD2A979EC300AF31E8 /* FoodRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527BC2A979EC300AF31E8 /* FoodRepository.swift */; };
 		794527C02A97A19A00AF31E8 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527BF2A97A19A00AF31E8 /* FoodListView.swift */; };
+		794527C22A97A27000AF31E8 /* FoodListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527C12A97A27000AF31E8 /* FoodListViewRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		794527BA2A979D0F00AF31E8 /* FoodAPIRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAPIRepresentation.swift; sourceTree = "<group>"; };
 		794527BC2A979EC300AF31E8 /* FoodRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRepository.swift; sourceTree = "<group>"; };
 		794527BF2A97A19A00AF31E8 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
+		794527C12A97A27000AF31E8 /* FoodListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				794527BF2A97A19A00AF31E8 /* FoodListView.swift */,
+				794527C12A97A27000AF31E8 /* FoodListViewRow.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				794527BD2A979EC300AF31E8 /* FoodRepository.swift in Sources */,
 				794527BB2A979D0F00AF31E8 /* FoodAPIRepresentation.swift in Sources */,
 				794527B82A979A3E00AF31E8 /* FoodAPIDataSource.swift in Sources */,
+				794527C22A97A27000AF31E8 /* FoodListViewRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
