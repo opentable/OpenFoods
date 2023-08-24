@@ -10,6 +10,8 @@ import SwiftUI
 struct RootView: View {
   @EnvironmentObject private var foodRepository: FoodRepository
   
+  @EnvironmentObject private var alertManager: AlertManager
+  
   var body: some View {
     Group {
       switch foodRepository.state {
@@ -47,6 +49,12 @@ struct RootView: View {
         }
         .padding()
       }
+    }
+    .alert(isPresented: $alertManager.isPresented) {
+      // `alertText` should always be non-nil when `isPresented` is true.
+      // TODO: Improve this to avoid the fallback error message.
+      assert(alertManager.alertText != nil)
+      return Alert(title: Text(alertManager.alertText ?? "An unknown error occurred"))
     }
     // Task is performed once when the view is displayed. This is preferred over the .onAppear
     // method because it can handle task cancellation on disappear, or even performing a new task

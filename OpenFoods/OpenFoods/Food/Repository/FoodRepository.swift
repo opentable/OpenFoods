@@ -29,6 +29,17 @@ class FoodRepository: ObservableObject {
   
   private let dataSource = FoodAPIDataSource()
   
+  /// The alert manager, used to alert the user of any errors.
+  ///
+  /// TODO: Consider refactoring so that the calling code catches errors and shows alerts instead.
+  /// However, calling to the alert manager once in this class avoids duplicate code and works for
+  /// our purposes.
+  private let alertManager: AlertManager
+  
+  init(alertManager: AlertManager) {
+    self.alertManager = alertManager
+  }
+  
   /// Loads the food from the API.
   func loadFood() {
     // If in the error state, reset to the loading state. Otherwise, leave it be, and the UI should
@@ -68,8 +79,10 @@ class FoodRepository: ObservableObject {
       do {
         try await dataSource.toggleItemLikeStatus(item: itemToToggle)
       } catch {
-        // TODO: Notify user with a toast, etc.
         await MainActor.run {
+          let likingWord = itemToToggle.isLiked ? "unliking" : "liking"
+          alertManager.presentAlert(
+            text: "An error occurred while \(likingWord) '\(itemToToggle.name)'")
           // Revert to the original state, as the request failed.
           // TODO: There is a potential race condition here where multiple requests could result
           // in an incorrect final state.

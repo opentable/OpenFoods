@@ -27,6 +27,7 @@
 		794527CD2A97AF3F00AF31E8 /* FoodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527CC2A97AF3F00AF31E8 /* FoodImageView.swift */; };
 		794527CF2A97B0C300AF31E8 /* FoodImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527CE2A97B0C300AF31E8 /* FoodImageLoader.swift */; };
 		794527D22A97BC6D00AF31E8 /* View+MinimumButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527D12A97BC6D00AF31E8 /* View+MinimumButtonSize.swift */; };
+		794527D52A97BF3800AF31E8 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527D42A97BF3800AF31E8 /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		794527CC2A97AF3F00AF31E8 /* FoodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodImageView.swift; sourceTree = "<group>"; };
 		794527CE2A97B0C300AF31E8 /* FoodImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodImageLoader.swift; sourceTree = "<group>"; };
 		794527D12A97BC6D00AF31E8 /* View+MinimumButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+MinimumButtonSize.swift"; sourceTree = "<group>"; };
+		794527D42A97BF3800AF31E8 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +126,8 @@
 				794527882A97991B00AF31E8 /* OpenFoodsApp.swift */,
 				7945278A2A97991B00AF31E8 /* RootView.swift */,
 				794527B32A9799A000AF31E8 /* Food */,
-				794527C52A97A42300AF31E8 /* Navigation */,
 				794527D02A97BC5F00AF31E8 /* SwiftUI */,
+				794527D32A97BF2D00AF31E8 /* UI */,
 				7945278C2A97991D00AF31E8 /* Assets.xcassets */,
 				7945278E2A97991D00AF31E8 /* OpenFoods.entitlements */,
 				7945278F2A97991D00AF31E8 /* Preview Content */,
@@ -193,19 +195,20 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		794527C52A97A42300AF31E8 /* Navigation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Navigation;
-			sourceTree = "<group>";
-		};
 		794527D02A97BC5F00AF31E8 /* SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
 				794527D12A97BC6D00AF31E8 /* View+MinimumButtonSize.swift */,
 			);
 			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		794527D32A97BF2D00AF31E8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				794527D42A97BF3800AF31E8 /* AlertManager.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794527D52A97BF3800AF31E8 /* AlertManager.swift in Sources */,
 				794527D22A97BC6D00AF31E8 /* View+MinimumButtonSize.swift in Sources */,
 				7945278B2A97991B00AF31E8 /* RootView.swift in Sources */,
 				794527C72A97A52900AF31E8 /* FoodHeartView.swift in Sources */,
