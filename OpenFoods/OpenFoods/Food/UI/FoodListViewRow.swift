@@ -22,19 +22,28 @@ struct FoodListViewRow: View {
   
   var body: some View {
     HStack(spacing: 0) {
-      FoodImageView(imageURL: item.photoURL)
-        .frame(width: foodImageSize, height: foodImageSize)
-        // The image uses `.scaledToFill`, which will re-size the image to fill, and spill over the
-        // edges of the container. Clip it to ensure that it will not overflow its container.
-        .clipped()
-        .cornerRadius(8)
-        .padding(.trailing, 12)
-      
-      VStack(alignment: .leading, spacing: 4) {
-        Text(item.name)
-          .font(.title2)
-        
-        FoodOriginView(origin: item.countryOfOrigin)
+      VStack(spacing: 0) {
+        HStack(alignment: .center, spacing: 0) {
+          FoodImageView(imageURL: item.photoURL)
+            .frame(width: foodImageSize, height: foodImageSize)
+            // The image uses `.scaledToFill`, which will re-size the image to fill, and spill over
+            // the edges of the container. Clip it to ensure that it will not overflow.
+            .clipped()
+            .cornerRadius(8)
+            .padding(.trailing, 12)
+          
+          VStack(alignment: .leading, spacing: 4) {
+            Text(item.name)
+              .font(.title2)
+            
+            FoodOriginView(origin: item.countryOfOrigin)
+          }
+          
+          // `minLength: 0` is required because Spacers have a non-zero minimum length if not
+          // supplied.
+          Spacer(minLength: 0)
+        }
+        .padding(.bottom, 8)
         
         Text(item.description)
           .font(.subheadline)
