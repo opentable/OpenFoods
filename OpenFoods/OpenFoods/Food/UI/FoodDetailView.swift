@@ -12,7 +12,9 @@ struct FoodDetailView: View {
   
   var body: some View {
     ScrollView {
-      VStack {
+      VStack(alignment: .leading, spacing: 4) {
+        FoodOriginView(origin: item.countryOfOrigin)
+        
         Text(item.description)
           .font(.body)
       }

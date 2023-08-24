@@ -19,10 +19,11 @@ struct FoodListViewRow: View {
   
   var body: some View {
     HStack(spacing: 0) {
-      VStack(alignment: .leading, spacing: 0) {
+      VStack(alignment: .leading, spacing: 4) {
         Text(item.name)
           .font(.title2)
-          .padding(.bottom, 4)
+        
+        FoodOriginView(origin: item.countryOfOrigin)
         
         Text(item.description)
           .font(.subheadline)
