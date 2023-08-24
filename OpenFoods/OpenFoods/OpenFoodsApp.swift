@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct OpenFoodsApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+  // The OpenTable API data source.
+  //
+  // TODO: Only temporarily here to test the code.
+  private let dataSource = FoodAPIDataSource()
+  
+  var body: some Scene {
+    WindowGroup {
+      ContentView()
+        .task {
+          let food = try? await dataSource.fetchFood()
+          print("Fetched food: \(food)")
         }
     }
+  }
 }

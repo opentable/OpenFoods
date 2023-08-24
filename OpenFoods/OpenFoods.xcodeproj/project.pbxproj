@@ -14,6 +14,8 @@
 		7945279B2A97991D00AF31E8 /* OpenFoodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7945279A2A97991D00AF31E8 /* OpenFoodsTests.swift */; };
 		794527A52A97991D00AF31E8 /* OpenFoodsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527A42A97991D00AF31E8 /* OpenFoodsUITests.swift */; };
 		794527A72A97991D00AF31E8 /* OpenFoodsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527A62A97991D00AF31E8 /* OpenFoodsUITestsLaunchTests.swift */; };
+		794527B52A9799B300AF31E8 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527B42A9799B300AF31E8 /* Food.swift */; };
+		794527B82A979A3E00AF31E8 /* FoodAPIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527B72A979A3E00AF31E8 /* FoodAPIDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		794527A02A97991D00AF31E8 /* OpenFoodsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenFoodsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		794527A42A97991D00AF31E8 /* OpenFoodsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFoodsUITests.swift; sourceTree = "<group>"; };
 		794527A62A97991D00AF31E8 /* OpenFoodsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFoodsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		794527B42A9799B300AF31E8 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		794527B72A979A3E00AF31E8 /* FoodAPIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAPIDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 			children = (
 				794527882A97991B00AF31E8 /* OpenFoodsApp.swift */,
 				7945278A2A97991B00AF31E8 /* ContentView.swift */,
+				794527B32A9799A000AF31E8 /* Food */,
 				7945278C2A97991D00AF31E8 /* Assets.xcassets */,
 				7945278E2A97991D00AF31E8 /* OpenFoods.entitlements */,
 				7945278F2A97991D00AF31E8 /* Preview Content */,
@@ -127,6 +132,23 @@
 				794527A62A97991D00AF31E8 /* OpenFoodsUITestsLaunchTests.swift */,
 			);
 			path = OpenFoodsUITests;
+			sourceTree = "<group>";
+		};
+		794527B32A9799A000AF31E8 /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				794527B62A979A3300AF31E8 /* Repository */,
+				794527B42A9799B300AF31E8 /* Food.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		794527B62A979A3300AF31E8 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				794527B72A979A3E00AF31E8 /* FoodAPIDataSource.swift */,
+			);
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,8 @@
 			files = (
 				7945278B2A97991B00AF31E8 /* ContentView.swift in Sources */,
 				794527892A97991B00AF31E8 /* OpenFoodsApp.swift in Sources */,
+				794527B52A9799B300AF31E8 /* Food.swift in Sources */,
+				794527B82A979A3E00AF31E8 /* FoodAPIDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
