@@ -44,4 +44,42 @@ class FoodRepository: ObservableObject {
       }
     }
   }
+  
+  func toggleItemLikeStatus(item itemToToggle: Food) {
+    guard case .loaded(let food) = state else {
+      // How did we end up in the state where we were liking an item without having loaded them?
+      // Nothing to do here, so we just return, but assert to alert the programmer.
+      assertionFailure("Unable to like/unlike food as items were not loaded")
+      return
+    }
+            
+    // Optimistically update the item's status locally, so that the UI updates immediately.
+    let optimisticallyUpdatedFood = updateFood(food, togglingItemIsLiked: itemToToggle)
+    state = .loaded(food: optimisticallyUpdatedFood)
+    
+    Task {
+      do {
+        try await dataSource.toggleItemLikeStatus(item: itemToToggle)
+      } catch {
+        // TODO: Notify user with a toast, etc.
+        await MainActor.run {
+          // Revert to the original state, as the request failed.
+          // TODO: There is a potential race condition here where multiple requests could result
+          // in an incorrect final state.
+          self.state = .loaded(food: food)
+        }
+      }
+    }
+  }
+  
+  /// Returns the given array of food, with the `itemToToggle`'s `isLiked` property toggled from
+  /// true to false or vice-versa.
+  private func updateFood(_ food: [Food], togglingItemIsLiked itemToToggle: Food) -> [Food] {
+    return food.map { item in
+      guard item.id == itemToToggle.id else {
+        return item
+      }
+      return itemToToggle.togglingIsLiked()
+    }
+  }
 }

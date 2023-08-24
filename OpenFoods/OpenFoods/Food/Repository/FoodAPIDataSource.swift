@@ -35,4 +35,28 @@ class FoodAPIDataSource {
       throw FoodAPIError.unknown
     }
   }
+  
+  // Toggles whether an item is liked or unliked.
+  func toggleItemLikeStatus(item: Food) async throws {
+    let urlFinalPath = item.isLiked ? "unlike" : "like"
+    let url = baseAPIURL.appending(path: "\(item.id)/\(urlFinalPath)")
+    let session = URLSession(configuration: .default)
+    var request = URLRequest(url: url)
+    request.httpMethod = "PUT"
+    do {
+      let (data, _) = try await session.data(for: request)
+      let jsonDecoder = JSONDecoder()
+      // When the like fails, the backend returns {"error": "message"}. This will fail decoding
+      // to the like response. This is good enough for our purposes right now, but parsing the
+      // error message would be better.
+      let response = try jsonDecoder.decode(FoodAPILikeResponse.self, from: data)
+      if !response.success {
+        // TODO: This will be caught and re-thrown - I should re-architect this to avoid that
+        // awkwardness.
+        throw FoodAPIError.unknown
+      }
+    } catch {
+      throw FoodAPIError.unknown
+    }
+  }
 }

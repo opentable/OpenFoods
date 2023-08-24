@@ -19,6 +19,18 @@ struct Food: Identifiable, Hashable {
   let description: String
   let countryOfOrigin: String
   let lastUpdatedDate: Date
+  
+  /// Returns the food item with the `isLiked` property toggled.
+  func togglingIsLiked() -> Food {
+    return Food(
+      id: id,
+      name: name,
+      isLiked: !isLiked,
+      photoURL: photoURL,
+      description: description,
+      countryOfOrigin: countryOfOrigin,
+      lastUpdatedDate: lastUpdatedDate)
+  }
 }
 
 #if DEBUG

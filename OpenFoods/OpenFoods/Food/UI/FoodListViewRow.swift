@@ -13,6 +13,8 @@ import SwiftUI
 private let minimumButtonSize = 44.0
 
 struct FoodListViewRow: View {
+  @EnvironmentObject private var foodRepository: FoodRepository
+  
   let item: Food
   
   var body: some View {
@@ -30,8 +32,7 @@ struct FoodListViewRow: View {
       Spacer(minLength: 8)
       
       Button {
-        // TODO: Implement like.
-        print("Liked: \(item.name)")
+        foodRepository.toggleItemLikeStatus(item: item)
       } label: {
         FoodHeartView(isLiked: item.isLiked)
           // Ensure the button is large enough to meet a11y guidelines. Center align means that the
