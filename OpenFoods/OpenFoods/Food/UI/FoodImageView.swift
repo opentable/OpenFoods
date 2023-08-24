@@ -22,6 +22,8 @@ struct FoodImageView: View {
   
   let imageURL: URL
   
+  @EnvironmentObject private var imageLoader: FoodImageLoader
+  
   @State private var state: LoadingState = .loading
   
   var body: some View {
@@ -33,11 +35,24 @@ struct FoodImageView: View {
       case .loaded(let image):
         Image(uiImage: image)
           .resizable()
+          // Ensure the image keeps its aspect ratio.
           .scaledToFill()
       case .error:
         // TODO: Better communicate error.
         RoundedRectangle(cornerRadius: 4)
           .fill(Color(uiColor: .systemRed))
+      }
+    }
+    .task {
+      do {
+        let image = try await imageLoader.loadImage(url: imageURL)
+        await MainActor.run {
+          state = .loaded(image: image)
+        }
+      } catch {
+        await MainActor.run {
+          state = .error(error: error)
+        }
       }
     }
   }

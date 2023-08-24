@@ -24,7 +24,11 @@ struct FoodListViewRow: View {
     HStack(spacing: 0) {
       FoodImageView(imageURL: item.photoURL)
         .frame(width: foodImageSize, height: foodImageSize)
-        .padding(.trailing, 8)
+        // The image uses `.scaledToFill`, which will re-size the image to fill, and spill over the
+        // edges of the container. Clip it to ensure that it will not overflow its container.
+        .clipped()
+        .cornerRadius(8)
+        .padding(.trailing, 12)
       
       VStack(alignment: .leading, spacing: 4) {
         Text(item.name)
