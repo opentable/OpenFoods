@@ -33,6 +33,7 @@ class FoodRepository: ObservableObject {
     Task {
       do {
         let food = try await dataSource.fetchFood()
+        print(food)
         // Published properties must be updated on the main thread.
         await MainActor.run {
           self.state = .loaded(food: food)

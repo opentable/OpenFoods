@@ -39,7 +39,8 @@ struct Food: Identifiable, Hashable {
       id: 1,
       name: "Pasta",
       isLiked: true,
-      photoURL: URL(string: "https://google.com")!,
+      photoURL:
+        URL(string: "https://opentable-dex-ios-test-d645a49e3287.herokuapp.com/images/pasta.jpeg")!,
       description: """
       Pasta is a type of food typically made from an unleavened dough of wheat flour mixed with
       water or eggs, and formed into sheets or other shapes, then cooked by boiling or baking. Rice

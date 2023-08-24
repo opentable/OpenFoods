@@ -30,22 +30,28 @@ struct FoodImageView: View {
     Group {
       switch state {
       case .loading:
-        RoundedRectangle(cornerRadius: 4)
+        Rectangle()
           .fill(Color(uiColor: .systemGray4))
       case .loaded(let image):
-        Image(uiImage: image)
-          .resizable()
-          // Ensure the image keeps its aspect ratio.
-          .scaledToFill()
+        // Using the image as an overlay allows us to use `scaleToFill` without altering the size
+        // that the parent has set for this view.
+        // See https://stackoverflow.com/a/73710494.
+        Color.clear.overlay(alignment: .center) {
+          Image(uiImage: image)
+            .resizable()
+            // Ensure the image keeps its aspect ratio.
+            .scaledToFill()
+        }
       case .error:
         // TODO: Better communicate error.
-        RoundedRectangle(cornerRadius: 4)
+        Rectangle()
           .fill(Color(uiColor: .systemRed))
       }
     }
     .task {
       do {
         let image = try await imageLoader.loadImage(url: imageURL)
+        try await Task.sleep(for: .seconds(2))
         await MainActor.run {
           state = .loaded(image: image)
         }

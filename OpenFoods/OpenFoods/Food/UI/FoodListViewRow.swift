@@ -22,13 +22,10 @@ struct FoodListViewRow: View {
   
   var body: some View {
     HStack(spacing: 0) {
-      VStack(spacing: 0) {
+      VStack(alignment: .leading, spacing: 0) {
         HStack(alignment: .center, spacing: 0) {
           FoodImageView(imageURL: item.photoURL)
             .frame(width: foodImageSize, height: foodImageSize)
-            // The image uses `.scaledToFill`, which will re-size the image to fill, and spill over
-            // the edges of the container. Clip it to ensure that it will not overflow.
-            .clipped()
             .cornerRadius(8)
             .padding(.trailing, 12)
           
@@ -72,5 +69,6 @@ struct FoodListViewRow: View {
 struct FoodListViewRow_Previews: PreviewProvider {
   static var previews: some View {
     FoodListViewRow(item: fakeFood.first!)
+      .environmentObject(FoodImageLoader())
   }
 }
