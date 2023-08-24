@@ -4,6 +4,28 @@
 
 This is a very simple application. We should have provided you with a unique URL for the API, this is just for you. You are asked to write the app that will display a list of foods from the API. The API also allows you to like and unlike foods.
 
+## Solution
+
+My solution is programmed using SwiftUI, and vanilla UIKit/Foundation APIs as much as possible.
+
+The app was programmed using Xcode 14.3.1 with a minimum deployment target of 16.0.
+
+Screenshots of the app:
+
+![Image of the list of food in the app](screenshots/list_view.png)
+![Image of the detail view of a food item in the app](screenshots/detail_view.png)
+![Image of the error view displayed when fetching food fails](screenshots/error_view.png)
+
+App capabilities:
+- Fetch and display the list of food, including the name, description, image, country of origin, and like status of the food
+- View the details of one item of food, including the full description
+- Handles the failure to like or unlike a food item gracefully and alerts the user
+- Handles a failure to fetch the list of food with a "Retry" button
+
+Future work:
+- Address race conditions in FoodRepository
+- De-duplicate multiple image requests with the same URL (on list and detail view, for instance)
+
 ## Minimum requirement
 
 - Fork or clone the repo
