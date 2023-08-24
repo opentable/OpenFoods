@@ -17,7 +17,9 @@ struct FoodListView: View {
         // Food is Identifiable, so no id needed.
         // This does assume the API will give us unique IDs for each item.
         ForEach(food) { item in
-          FoodListViewRow(item: item)
+          NavigationLink(value: item) {
+            FoodListViewRow(item: item)
+          }
         }
       }
     } else {

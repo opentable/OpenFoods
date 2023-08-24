@@ -16,7 +16,13 @@ struct RootView: View {
       case .loading:
         ProgressView()
       case .loaded(let food):
-        FoodListView(food: food)
+        NavigationStack {
+          FoodListView(food: food)
+            .navigationTitle("Food")
+            .navigationDestination(for: Food.self) { item in
+              FoodDetailView(item: item)
+            }
+        }
       case .error(_):
         // TODO: Handle retry.
         Text("Error loading food!")

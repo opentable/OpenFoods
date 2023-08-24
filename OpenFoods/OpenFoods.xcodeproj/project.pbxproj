@@ -20,6 +20,7 @@
 		794527BD2A979EC300AF31E8 /* FoodRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527BC2A979EC300AF31E8 /* FoodRepository.swift */; };
 		794527C02A97A19A00AF31E8 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527BF2A97A19A00AF31E8 /* FoodListView.swift */; };
 		794527C22A97A27000AF31E8 /* FoodListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527C12A97A27000AF31E8 /* FoodListViewRow.swift */; };
+		794527C42A97A3FA00AF31E8 /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527C32A97A3FA00AF31E8 /* FoodDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		794527BC2A979EC300AF31E8 /* FoodRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRepository.swift; sourceTree = "<group>"; };
 		794527BF2A97A19A00AF31E8 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
 		794527C12A97A27000AF31E8 /* FoodListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewRow.swift; sourceTree = "<group>"; };
+		794527C32A97A3FA00AF31E8 /* FoodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				794527882A97991B00AF31E8 /* OpenFoodsApp.swift */,
 				7945278A2A97991B00AF31E8 /* RootView.swift */,
 				794527B32A9799A000AF31E8 /* Food */,
+				794527C52A97A42300AF31E8 /* Navigation */,
 				7945278C2A97991D00AF31E8 /* Assets.xcassets */,
 				7945278E2A97991D00AF31E8 /* OpenFoods.entitlements */,
 				7945278F2A97991D00AF31E8 /* Preview Content */,
@@ -167,8 +170,16 @@
 			children = (
 				794527BF2A97A19A00AF31E8 /* FoodListView.swift */,
 				794527C12A97A27000AF31E8 /* FoodListViewRow.swift */,
+				794527C32A97A3FA00AF31E8 /* FoodDetailView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		794527C52A97A42300AF31E8 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +314,7 @@
 			files = (
 				7945278B2A97991B00AF31E8 /* RootView.swift in Sources */,
 				794527892A97991B00AF31E8 /* OpenFoodsApp.swift in Sources */,
+				794527C42A97A3FA00AF31E8 /* FoodDetailView.swift in Sources */,
 				794527C02A97A19A00AF31E8 /* FoodListView.swift in Sources */,
 				794527B52A9799B300AF31E8 /* Food.swift in Sources */,
 				794527BD2A979EC300AF31E8 /* FoodRepository.swift in Sources */,
