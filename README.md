@@ -12,9 +12,9 @@ The app was programmed using Xcode 14.3.1 with a minimum deployment target of 16
 
 Screenshots of the app:
 
-![Image of the list of food in the app](screenshots/list_view.png)
-![Image of the detail view of a food item in the app](screenshots/detail_view.png)
-![Image of the error view displayed when fetching food fails](screenshots/error_view.png)
+<img src="/runnersaw/OpenFoods/raw/main/screenshots/list_view.png" alt="Image of the list of food in the app" style="max-width: 200px;">
+<img src="/runnersaw/OpenFoods/raw/main/screenshots/detail_view.png" alt="Image of the detail view of a food item in the app" style="max-width: 200px;">
+<img src="/runnersaw/OpenFoods/raw/main/screenshots/error_view.png" alt="Image of the error view displayed when fetching food fails" style="max-width: 200px;">
 
 App capabilities:
 - Fetch and display the list of food, including the name, description, image, country of origin, and like status of the food
