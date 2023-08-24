@@ -29,6 +29,7 @@ class FoodAPIDataSource {
       let (data, _) = try await session.data(from: baseAPIURL)
       let jsonDecoder = JSONDecoder()
       let apiRepresentations = try jsonDecoder.decode([FoodAPIRepresentation].self, from: data)
+      throw FoodAPIError.unknown
       return apiRepresentations.compactMap { $0.toFood() }
     } catch {
       // TODO: Parse the error and return an appropriate code.

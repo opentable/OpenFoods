@@ -29,11 +29,17 @@ class FoodRepository: ObservableObject {
   
   private let dataSource = FoodAPIDataSource()
   
+  /// Loads the food from the API.
   func loadFood() {
+    // If in the error state, reset to the loading state. Otherwise, leave it be, and the UI should
+    // only update with the differences since last fetch.
+    if case .error = state {
+      state = .loading
+    }
+    
     Task {
       do {
         let food = try await dataSource.fetchFood()
-        print(food)
         // Published properties must be updated on the main thread.
         await MainActor.run {
           self.state = .loaded(food: food)

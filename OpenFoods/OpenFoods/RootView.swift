@@ -30,8 +30,21 @@ struct RootView: View {
             }
         }
       case .error(_):
-        // TODO: Handle retry.
-        Text("Error loading food!")
+        VStack(spacing: 12) {
+          Image(systemName: "exclamationmark.triangle")
+            .resizable()
+            .frame(width: 36, height: 36)
+          
+          Text("There was an error loading the food.")
+            .padding(.bottom, 20)
+          
+          Button {
+            foodRepository.loadFood()
+          } label: {
+            Text("Retry")
+          }
+        }
+        .padding()
       }
     }
     // Task is performed once when the view is displayed. This is preferred over the .onAppear
