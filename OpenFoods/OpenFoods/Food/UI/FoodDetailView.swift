@@ -11,9 +11,14 @@ struct FoodDetailView: View {
   let item: Food
   
   var body: some View {
-    VStack {
-      Text(item.name)
+    ScrollView {
+      VStack {
+        Text(item.description)
+          .font(.body)
+      }
+      .padding()
     }
+    .navigationTitle(item.name)
   }
 }
 
