@@ -24,6 +24,7 @@
 		794527C72A97A52900AF31E8 /* FoodHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527C62A97A52900AF31E8 /* FoodHeartView.swift */; };
 		794527C92A97A92F00AF31E8 /* FoodAPILikeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527C82A97A92F00AF31E8 /* FoodAPILikeResponse.swift */; };
 		794527CB2A97ADC400AF31E8 /* FoodOriginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527CA2A97ADC400AF31E8 /* FoodOriginView.swift */; };
+		794527CD2A97AF3F00AF31E8 /* FoodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527CC2A97AF3F00AF31E8 /* FoodImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		794527C62A97A52900AF31E8 /* FoodHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHeartView.swift; sourceTree = "<group>"; };
 		794527C82A97A92F00AF31E8 /* FoodAPILikeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAPILikeResponse.swift; sourceTree = "<group>"; };
 		794527CA2A97ADC400AF31E8 /* FoodOriginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOriginView.swift; sourceTree = "<group>"; };
+		794527CC2A97AF3F00AF31E8 /* FoodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				794527C32A97A3FA00AF31E8 /* FoodDetailView.swift */,
 				794527C62A97A52900AF31E8 /* FoodHeartView.swift */,
 				794527CA2A97ADC400AF31E8 /* FoodOriginView.swift */,
+				794527CC2A97AF3F00AF31E8 /* FoodImageView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				794527BD2A979EC300AF31E8 /* FoodRepository.swift in Sources */,
 				794527BB2A979D0F00AF31E8 /* FoodAPIRepresentation.swift in Sources */,
 				794527B82A979A3E00AF31E8 /* FoodAPIDataSource.swift in Sources */,
+				794527CD2A97AF3F00AF31E8 /* FoodImageView.swift in Sources */,
 				794527C22A97A27000AF31E8 /* FoodListViewRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

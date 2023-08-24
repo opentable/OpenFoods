@@ -12,6 +12,9 @@ import SwiftUI
 /// should be.
 private let minimumButtonSize = 44.0
 
+/// The size of the food image.
+private let foodImageSize = 48.0
+
 struct FoodListViewRow: View {
   @EnvironmentObject private var foodRepository: FoodRepository
   
@@ -19,6 +22,10 @@ struct FoodListViewRow: View {
   
   var body: some View {
     HStack(spacing: 0) {
+      FoodImageView(imageURL: item.photoURL)
+        .frame(width: foodImageSize, height: foodImageSize)
+        .padding(.trailing, 8)
+      
       VStack(alignment: .leading, spacing: 4) {
         Text(item.name)
           .font(.title2)
