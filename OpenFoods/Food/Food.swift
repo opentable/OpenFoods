@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// The model representing of a food.
+/// The model representing a food item.
 ///
 /// This model is distinct from the API representation, and is the definitive model used throughout
 /// the app.

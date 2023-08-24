@@ -17,6 +17,11 @@ struct FoodListViewRow: View {
   let item: Food
   
   var body: some View {
+    // I recognize that there are lots of constants in this file that could be extracted to local
+    // variables. On my previous team, we had lots of discussions about whether or not to extract
+    // these constants into variables. I have not done this here, partially for time's sake, and
+    // partially because I find it more useful when coding with SwiftUI previews to be able to keep
+    // my Xcode window focused on the view body as I make quick changes.
     HStack(spacing: 0) {
       VStack(alignment: .leading, spacing: 0) {
         HStack(alignment: .center, spacing: 0) {

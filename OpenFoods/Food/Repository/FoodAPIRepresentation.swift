@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// The representation of a food retrieved from the API.
+/// The representation of a food item retrieved from the API.
 ///
 /// The properties of this struct match the key and type of the JSON returned from the API in order
 /// to take advantage of the Codable infrastructure to parse the JSON.
