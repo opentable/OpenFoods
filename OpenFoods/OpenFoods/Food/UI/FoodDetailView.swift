@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct FoodDetailView: View {
+  @EnvironmentObject private var foodRepository: FoodRepository
+
   let item: Food
   
   var body: some View {
@@ -29,6 +31,15 @@ struct FoodDetailView: View {
       .padding()
     }
     .navigationTitle(item.name)
+    .toolbar {
+      ToolbarItem(placement: .primaryAction) {
+        Button {
+          foodRepository.toggleItemLikeStatus(item: item)
+        } label: {
+          FoodHeartView(isLiked: item.isLiked)
+        }
+      }
+    }
   }
 }
 

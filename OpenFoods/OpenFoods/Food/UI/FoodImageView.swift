@@ -51,7 +51,6 @@ struct FoodImageView: View {
     .task {
       do {
         let image = try await imageLoader.loadImage(url: imageURL)
-        try await Task.sleep(for: .seconds(2))
         await MainActor.run {
           state = .loaded(image: image)
         }
