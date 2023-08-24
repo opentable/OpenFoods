@@ -20,7 +20,13 @@ struct RootView: View {
           FoodListView(food: food)
             .navigationTitle("Food")
             .navigationDestination(for: Food.self) { item in
-              FoodDetailView(item: item)
+              // In order for the detail view to get the most recent item updates, find the item in
+              // the repository rather than passing on the destination object itself. If the item
+              // is unable to be found, fall back to the navigation item. This should not happen,
+              // but in general I avoid getting the user into any crashing or weird scenario as
+              // much as possible.
+              let detailItem = food.first { $0.id == item.id } ?? item
+              FoodDetailView(item: detailItem)
             }
         }
       case .error(_):
