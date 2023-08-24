@@ -11,7 +11,7 @@ import Foundation
 ///
 /// This model is distinct from the API representation, and is the definitive model used throughout
 /// the app.
-struct Food {
+struct Food: Identifiable {
   let id: Int
   let name: String
   let isLiked: Bool

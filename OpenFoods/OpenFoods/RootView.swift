@@ -14,13 +14,9 @@ struct RootView: View {
     Group {
       switch foodRepository.state {
       case .loading:
-        Text("Loading...")
+        ProgressView()
       case .loaded(let food):
-        if let first = food.first {
-          Text(first.name)
-        } else {
-          Text("Empty array!")
-        }
+        FoodListView(food: food)
       case .error(_):
         // TODO: Handle retry.
         Text("Error loading food!")

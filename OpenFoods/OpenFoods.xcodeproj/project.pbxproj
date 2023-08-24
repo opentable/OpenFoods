@@ -18,6 +18,7 @@
 		794527B82A979A3E00AF31E8 /* FoodAPIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527B72A979A3E00AF31E8 /* FoodAPIDataSource.swift */; };
 		794527BB2A979D0F00AF31E8 /* FoodAPIRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527BA2A979D0F00AF31E8 /* FoodAPIRepresentation.swift */; };
 		794527BD2A979EC300AF31E8 /* FoodRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527BC2A979EC300AF31E8 /* FoodRepository.swift */; };
+		794527C02A97A19A00AF31E8 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527BF2A97A19A00AF31E8 /* FoodListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		794527B72A979A3E00AF31E8 /* FoodAPIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAPIDataSource.swift; sourceTree = "<group>"; };
 		794527BA2A979D0F00AF31E8 /* FoodAPIRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAPIRepresentation.swift; sourceTree = "<group>"; };
 		794527BC2A979EC300AF31E8 /* FoodRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRepository.swift; sourceTree = "<group>"; };
+		794527BF2A97A19A00AF31E8 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +143,9 @@
 		794527B32A9799A000AF31E8 /* Food */ = {
 			isa = PBXGroup;
 			children = (
-				794527B62A979A3300AF31E8 /* Repository */,
 				794527B42A9799B300AF31E8 /* Food.swift */,
+				794527B62A979A3300AF31E8 /* Repository */,
+				794527BE2A97A18500AF31E8 /* UI */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -155,6 +158,14 @@
 				794527BC2A979EC300AF31E8 /* FoodRepository.swift */,
 			);
 			path = Repository;
+			sourceTree = "<group>";
+		};
+		794527BE2A97A18500AF31E8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				794527BF2A97A19A00AF31E8 /* FoodListView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -289,6 +300,7 @@
 			files = (
 				7945278B2A97991B00AF31E8 /* RootView.swift in Sources */,
 				794527892A97991B00AF31E8 /* OpenFoodsApp.swift in Sources */,
+				794527C02A97A19A00AF31E8 /* FoodListView.swift in Sources */,
 				794527B52A9799B300AF31E8 /* Food.swift in Sources */,
 				794527BD2A979EC300AF31E8 /* FoodRepository.swift in Sources */,
 				794527BB2A979D0F00AF31E8 /* FoodAPIRepresentation.swift in Sources */,
