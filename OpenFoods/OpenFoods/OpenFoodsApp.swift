@@ -14,7 +14,7 @@ struct OpenFoodsApp: App {
   
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      RootView()
         // Pass food repository to the ContentView and all subviews via the environment. This could
         // be done via initializers instead, but I chose this for the sake of brevity.
         .environmentObject(foodRepository)

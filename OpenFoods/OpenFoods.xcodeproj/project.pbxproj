@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		794527892A97991B00AF31E8 /* OpenFoodsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527882A97991B00AF31E8 /* OpenFoodsApp.swift */; };
-		7945278B2A97991B00AF31E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7945278A2A97991B00AF31E8 /* ContentView.swift */; };
+		7945278B2A97991B00AF31E8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7945278A2A97991B00AF31E8 /* RootView.swift */; };
 		7945278D2A97991D00AF31E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7945278C2A97991D00AF31E8 /* Assets.xcassets */; };
 		794527912A97991D00AF31E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 794527902A97991D00AF31E8 /* Preview Assets.xcassets */; };
 		7945279B2A97991D00AF31E8 /* OpenFoodsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7945279A2A97991D00AF31E8 /* OpenFoodsTests.swift */; };
@@ -40,7 +40,7 @@
 /* Begin PBXFileReference section */
 		794527852A97991B00AF31E8 /* OpenFoods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenFoods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		794527882A97991B00AF31E8 /* OpenFoodsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFoodsApp.swift; sourceTree = "<group>"; };
-		7945278A2A97991B00AF31E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7945278A2A97991B00AF31E8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		7945278C2A97991D00AF31E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7945278E2A97991D00AF31E8 /* OpenFoods.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OpenFoods.entitlements; sourceTree = "<group>"; };
 		794527902A97991D00AF31E8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				794527882A97991B00AF31E8 /* OpenFoodsApp.swift */,
-				7945278A2A97991B00AF31E8 /* ContentView.swift */,
+				7945278A2A97991B00AF31E8 /* RootView.swift */,
 				794527B32A9799A000AF31E8 /* Food */,
 				7945278C2A97991D00AF31E8 /* Assets.xcassets */,
 				7945278E2A97991D00AF31E8 /* OpenFoods.entitlements */,
@@ -287,7 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7945278B2A97991B00AF31E8 /* ContentView.swift in Sources */,
+				7945278B2A97991B00AF31E8 /* RootView.swift in Sources */,
 				794527892A97991B00AF31E8 /* OpenFoodsApp.swift in Sources */,
 				794527B52A9799B300AF31E8 /* Food.swift in Sources */,
 				794527BD2A979EC300AF31E8 /* FoodRepository.swift in Sources */,
