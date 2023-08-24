@@ -8,19 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+  @EnvironmentObject private var foodRepository: FoodRepository
+  
+  var body: some View {
+    Group {
+      switch foodRepository.state {
+      case .loading:
+        Text("Loading...")
+      case .loaded(let food):
+        if let first = food.first {
+          Text(first.name)
+        } else {
+          Text("Empty array!")
         }
-        .padding()
+      case .error(_):
+        // TODO: Handle retry.
+        Text("Error loading food!")
+      }
     }
+    // Task is performed once when the view is displayed. This is preferred over the .onAppear
+    // method because it can handle task cancellation on disappear, or even performing a new task
+    // if the `task(id:)` method is used.
+    .task {
+      // Load the food when the view appears. When loaded, the view will update because it is
+      // observing the foodRepository in the environment.
+      foodRepository.loadFood()
+    }
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+  static var previews: some View {
+    ContentView()
+  }
 }

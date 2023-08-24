@@ -17,6 +17,7 @@
 		794527B52A9799B300AF31E8 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527B42A9799B300AF31E8 /* Food.swift */; };
 		794527B82A979A3E00AF31E8 /* FoodAPIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527B72A979A3E00AF31E8 /* FoodAPIDataSource.swift */; };
 		794527BB2A979D0F00AF31E8 /* FoodAPIRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527BA2A979D0F00AF31E8 /* FoodAPIRepresentation.swift */; };
+		794527BD2A979EC300AF31E8 /* FoodRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527BC2A979EC300AF31E8 /* FoodRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		794527B42A9799B300AF31E8 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		794527B72A979A3E00AF31E8 /* FoodAPIDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAPIDataSource.swift; sourceTree = "<group>"; };
 		794527BA2A979D0F00AF31E8 /* FoodAPIRepresentation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodAPIRepresentation.swift; sourceTree = "<group>"; };
+		794527BC2A979EC300AF31E8 /* FoodRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				794527B72A979A3E00AF31E8 /* FoodAPIDataSource.swift */,
 				794527BA2A979D0F00AF31E8 /* FoodAPIRepresentation.swift */,
+				794527BC2A979EC300AF31E8 /* FoodRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				7945278B2A97991B00AF31E8 /* ContentView.swift in Sources */,
 				794527892A97991B00AF31E8 /* OpenFoodsApp.swift in Sources */,
 				794527B52A9799B300AF31E8 /* Food.swift in Sources */,
+				794527BD2A979EC300AF31E8 /* FoodRepository.swift in Sources */,
 				794527BB2A979D0F00AF31E8 /* FoodAPIRepresentation.swift in Sources */,
 				794527B82A979A3E00AF31E8 /* FoodAPIDataSource.swift in Sources */,
 			);

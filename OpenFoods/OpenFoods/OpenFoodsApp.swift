@@ -9,18 +9,15 @@ import SwiftUI
 
 @main
 struct OpenFoodsApp: App {
-  // The OpenTable API data source.
-  //
-  // TODO: Only temporarily here to test the code.
-  private let dataSource = FoodAPIDataSource()
+  // The repository containing the current state of loaded food.
+  private let foodRepository = FoodRepository()
   
   var body: some Scene {
     WindowGroup {
       ContentView()
-        .task {
-          let food = try? await dataSource.fetchFood()
-          print("Fetched food: \(food)")
-        }
+        // Pass food repository to the ContentView and all subviews via the environment. This could
+        // be done via initializers instead, but I chose this for the sake of brevity.
+        .environmentObject(foodRepository)
     }
   }
 }
