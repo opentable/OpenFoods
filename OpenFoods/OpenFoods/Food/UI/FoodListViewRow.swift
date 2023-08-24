@@ -8,10 +8,6 @@
 import Foundation
 import SwiftUI
 
-/// The minimum button size. For accessibility reasons, this is the smallest tap area a button
-/// should be.
-private let minimumButtonSize = 44.0
-
 /// The size of the food image.
 private let foodImageSize = 48.0
 
@@ -53,10 +49,8 @@ struct FoodListViewRow: View {
         foodRepository.toggleItemLikeStatus(item: item)
       } label: {
         FoodHeartView(isLiked: item.isLiked)
-          // Ensure the button is large enough to meet a11y guidelines. Center align means that the
-          // original view will be centered and padding added on the sides if it was not big
-          // enough.
-          .frame(minWidth: minimumButtonSize, minHeight: minimumButtonSize, alignment: .center)
+          // Ensure the button is large enough to meet a11y guidelines.
+          .applyMinimumButtonSize()
       }
       // Applying the button style is necessary to make the button take tap precendence over the
       // list row. (I don't know why.)

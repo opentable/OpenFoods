@@ -26,6 +26,7 @@
 		794527CB2A97ADC400AF31E8 /* FoodOriginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527CA2A97ADC400AF31E8 /* FoodOriginView.swift */; };
 		794527CD2A97AF3F00AF31E8 /* FoodImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527CC2A97AF3F00AF31E8 /* FoodImageView.swift */; };
 		794527CF2A97B0C300AF31E8 /* FoodImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527CE2A97B0C300AF31E8 /* FoodImageLoader.swift */; };
+		794527D22A97BC6D00AF31E8 /* View+MinimumButtonSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527D12A97BC6D00AF31E8 /* View+MinimumButtonSize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		794527CA2A97ADC400AF31E8 /* FoodOriginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodOriginView.swift; sourceTree = "<group>"; };
 		794527CC2A97AF3F00AF31E8 /* FoodImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodImageView.swift; sourceTree = "<group>"; };
 		794527CE2A97B0C300AF31E8 /* FoodImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodImageLoader.swift; sourceTree = "<group>"; };
+		794527D12A97BC6D00AF31E8 /* View+MinimumButtonSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+MinimumButtonSize.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				7945278A2A97991B00AF31E8 /* RootView.swift */,
 				794527B32A9799A000AF31E8 /* Food */,
 				794527C52A97A42300AF31E8 /* Navigation */,
+				794527D02A97BC5F00AF31E8 /* SwiftUI */,
 				7945278C2A97991D00AF31E8 /* Assets.xcassets */,
 				7945278E2A97991D00AF31E8 /* OpenFoods.entitlements */,
 				7945278F2A97991D00AF31E8 /* Preview Content */,
@@ -195,6 +198,14 @@
 			children = (
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		794527D02A97BC5F00AF31E8 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				794527D12A97BC6D00AF31E8 /* View+MinimumButtonSize.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794527D22A97BC6D00AF31E8 /* View+MinimumButtonSize.swift in Sources */,
 				7945278B2A97991B00AF31E8 /* RootView.swift in Sources */,
 				794527C72A97A52900AF31E8 /* FoodHeartView.swift in Sources */,
 				794527892A97991B00AF31E8 /* OpenFoodsApp.swift in Sources */,

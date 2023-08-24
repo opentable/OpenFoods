@@ -42,6 +42,7 @@ struct RootView: View {
             foodRepository.loadFood()
           } label: {
             Text("Retry")
+              .applyMinimumButtonSize()
           }
         }
         .padding()
