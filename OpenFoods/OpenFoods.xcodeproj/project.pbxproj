@@ -21,6 +21,7 @@
 		794527C02A97A19A00AF31E8 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527BF2A97A19A00AF31E8 /* FoodListView.swift */; };
 		794527C22A97A27000AF31E8 /* FoodListViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527C12A97A27000AF31E8 /* FoodListViewRow.swift */; };
 		794527C42A97A3FA00AF31E8 /* FoodDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527C32A97A3FA00AF31E8 /* FoodDetailView.swift */; };
+		794527C72A97A52900AF31E8 /* FoodHeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794527C62A97A52900AF31E8 /* FoodHeartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		794527BF2A97A19A00AF31E8 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
 		794527C12A97A27000AF31E8 /* FoodListViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewRow.swift; sourceTree = "<group>"; };
 		794527C32A97A3FA00AF31E8 /* FoodDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailView.swift; sourceTree = "<group>"; };
+		794527C62A97A52900AF31E8 /* FoodHeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodHeartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				794527BF2A97A19A00AF31E8 /* FoodListView.swift */,
 				794527C12A97A27000AF31E8 /* FoodListViewRow.swift */,
 				794527C32A97A3FA00AF31E8 /* FoodDetailView.swift */,
+				794527C62A97A52900AF31E8 /* FoodHeartView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7945278B2A97991B00AF31E8 /* RootView.swift in Sources */,
+				794527C72A97A52900AF31E8 /* FoodHeartView.swift in Sources */,
 				794527892A97991B00AF31E8 /* OpenFoodsApp.swift in Sources */,
 				794527C42A97A3FA00AF31E8 /* FoodDetailView.swift in Sources */,
 				794527C02A97A19A00AF31E8 /* FoodListView.swift in Sources */,
