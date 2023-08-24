@@ -7,16 +7,16 @@
 
 import Foundation
 
-/// The representation of a food retrieved from the API.
+/// The model representing of a food.
 ///
-/// The properties of this struct match the key and type of the JSON returned from the API in order
-/// to take advantage of the Codable infrastructure to parse the JSON.
-struct Food: Codable {
+/// This model is distinct from the API representation, and is the definitive model used throughout
+/// the app.
+struct Food {
   let id: Int
   let name: String
   let isLiked: Bool
-  let photoURL: String
+  let photoURL: URL
   let description: String
   let countryOfOrigin: String
-  let lastUpdatedDate: String
+  let lastUpdatedDate: Date
 }
