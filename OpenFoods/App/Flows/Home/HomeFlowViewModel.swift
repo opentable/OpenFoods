@@ -34,7 +34,7 @@ final class HomeFlowViewModel {
         return foodItems.count
     }
 
-    func article(at indexPath: IndexPath) -> FoodListItem? {
+    func item(at indexPath: IndexPath) -> FoodListItem? {
         if indexPath.row < 0 || indexPath.row >= numberOfItems(in: indexPath.section) { return nil }
         return foodItems[indexPath.row]
     }

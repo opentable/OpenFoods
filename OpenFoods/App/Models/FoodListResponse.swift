@@ -12,7 +12,7 @@ struct FoodListItem: Decodable {
     let id : Int
     let name : String
     let isLiked : Bool
-    let photoURL : String
+    let photoURL : URL
     let description : String
     let countryOfOrigin : String
     let lastUpdatedDate : Date
