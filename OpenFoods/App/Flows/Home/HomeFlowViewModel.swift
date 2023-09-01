@@ -39,11 +39,6 @@ final class HomeFlowViewModel {
         return foodItems[indexPath.row]
     }
 
-//    func cellViewModel(at indexPath: IndexPath) -> ArticleCellViewModel? {
-//        guard let article = article(at: indexPath) else { return nil }
-//        return ArticleCellViewModel(article)
-//    }
-
     func update(completion: @escaping () -> Void) {
 
         let resource = Resource<[FoodListItem]>(request: FoodListRequest())
@@ -61,4 +56,10 @@ final class HomeFlowViewModel {
         task?.resume()
     }
     
+    func timeAgo(since date: Date = Date(), to toDate: Date) -> String {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        formatter.locale = Calendar.current.locale
+        return formatter.localizedString(for: toDate, relativeTo: date)
+    }
 }

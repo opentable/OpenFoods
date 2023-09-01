@@ -9,16 +9,22 @@
 import UIKit
 
 class FoodItemTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var mainImageView: UIImageView!
+    @IBOutlet weak var mainTitle: UILabel!
+    @IBOutlet weak var mainDescription: UILabel!
+    @IBOutlet weak var isLikedButton: UIButton!
+    @IBOutlet weak var dateUpdated: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        mainImageView.layer.cornerRadius = 10.0
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    override func prepareForReuse() {
+        mainTitle.text = nil
+        mainDescription.text = nil
+        dateUpdated.text = nil
     }
     
 }
