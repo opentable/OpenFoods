@@ -56,14 +56,70 @@
 		009C4C6A1D9F0CD600F0BC6C /* OpenFoods */ = {
 			isa = PBXGroup;
 			children = (
+				BA6FD6492AA2188500FED79B /* App */,
+				BA6FD6482AA2187700FED79B /* Core */,
 				009C4C6B1D9F0CD600F0BC6C /* AppDelegate.swift */,
 				009C4C6D1D9F0CD600F0BC6C /* ViewController.swift */,
-				009C4C6F1D9F0CD600F0BC6C /* Main.storyboard */,
-				009C4C741D9F0CD600F0BC6C /* LaunchScreen.storyboard */,
 				009C4C721D9F0CD600F0BC6C /* Assets.xcassets */,
 				009C4C771D9F0CD600F0BC6C /* Info.plist */,
 			);
 			path = OpenFoods;
+			sourceTree = "<group>";
+		};
+		BA6FD6482AA2187700FED79B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				BA6FD64C2AA21A4900FED79B /* Network */,
+				BA6FD64B2AA21A2900FED79B /* Protocols */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		BA6FD6492AA2188500FED79B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BA6FD64E2AA21B2200FED79B /* Flows */,
+				BA6FD64D2AA21B1200FED79B /* Models */,
+				BA6FD64A2AA219EF00FED79B /* UIs */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BA6FD64A2AA219EF00FED79B /* UIs */ = {
+			isa = PBXGroup;
+			children = (
+				009C4C6F1D9F0CD600F0BC6C /* Main.storyboard */,
+				009C4C741D9F0CD600F0BC6C /* LaunchScreen.storyboard */,
+			);
+			path = UIs;
+			sourceTree = "<group>";
+		};
+		BA6FD64B2AA21A2900FED79B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		BA6FD64C2AA21A4900FED79B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		BA6FD64D2AA21B1200FED79B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA6FD64E2AA21B2200FED79B /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
