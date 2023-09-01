@@ -8,35 +8,58 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController {
-
+class HomeTableViewController: UIViewController {
+    
+    var viewModel: HomeFlowViewModel!
+    @IBOutlet private var tableView: UITableView!
+    private let refreshControl = UIRefreshControl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        precondition(viewModel != nil, "You forgot to attach a ViewModel")
 
-        print("Home Again")
+        view.accessibilityIdentifier = "homeScreen"
+        navigationItem.title = "Food"
+
+        tableView.register(cellType: FoodItemTableViewCell.self)
+        tableView.refreshControl = refreshControl
+
+        refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
+        refreshControl.attributedTitle = NSAttributedString(string: "Fetching Food..")
+
+        updateUI()
     }
 
+    @objc func refreshData(_ sender: UIRefreshControl) {
+        updateUI()
+    }
+
+    func updateUI() {
+        viewModel.update { [unowned self] in
+            DispatchQueue.main.async {
+                self.refreshControl.endRefreshing()
+                self.tableView.reloadData()
+            }
+        }
+    }
+}
+
+extension HomeTableViewController: UITableViewDataSource {
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return viewModel.numberOfSections
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.numberOfItems(in: section)
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(with: FoodItemTableViewCell.self, for: indexPath)
+        cell.backgroundColor = indexPath.row % 2 == 0 ? .red : .black
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

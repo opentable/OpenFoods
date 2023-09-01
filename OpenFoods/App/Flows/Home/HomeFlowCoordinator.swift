@@ -22,7 +22,7 @@ final class HomeFlowCoordinator: Coordinator {
     func start() {
         let view = HomeTableViewController.instantiate()
         
-        // create viewModel
+        view.viewModel = HomeFlowViewModel(coodinator: self)
         
         navigationController.setViewControllers([view], animated: false)
     }

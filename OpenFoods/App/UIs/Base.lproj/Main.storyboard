@@ -9,22 +9,41 @@
     </dependencies>
     <scenes>
         <!--Home Table View Controller-->
-        <scene sceneID="4yt-pJ-ZiZ">
+        <scene sceneID="ruY-Z3-T6O">
             <objects>
-                <tableViewController storyboardIdentifier="HomeTableViewController" id="ayU-gj-8Wx" customClass="HomeTableViewController" customModule="OpenFoods" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Two-G4-zYb">
+                <viewController storyboardIdentifier="HomeTableViewController" id="b1v-fJ-ZFy" customClass="HomeTableViewController" customModule="OpenFoods" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XUv-Se-dXr"/>
+                        <viewControllerLayoutGuide type="bottom" id="PLl-Vx-Nw8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1yw-5Y-5X3">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="RTw-9v-pzT">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="b1v-fJ-ZFy" id="2wH-VC-k3N"/>
+                                    <outlet property="delegate" destination="b1v-fJ-ZFy" id="DGb-jj-kBn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="ayU-gj-8Wx" id="7Pl-Ys-UV0"/>
-                            <outlet property="delegate" destination="ayU-gj-8Wx" id="lWs-fx-Inw"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jmq-xi-xCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="RTw-9v-pzT" firstAttribute="top" secondItem="1yw-5Y-5X3" secondAttribute="top" id="0p9-LT-Mda"/>
+                            <constraint firstItem="RTw-9v-pzT" firstAttribute="trailing" secondItem="1yw-5Y-5X3" secondAttribute="trailing" id="HEi-7w-ePX"/>
+                            <constraint firstItem="RTw-9v-pzT" firstAttribute="leading" secondItem="1yw-5Y-5X3" secondAttribute="leading" id="KOV-rk-JXz"/>
+                            <constraint firstItem="RTw-9v-pzT" firstAttribute="bottom" secondItem="1yw-5Y-5X3" secondAttribute="bottom" id="v9o-FG-2Na"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="RTw-9v-pzT" id="PYH-4N-8OL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPg-DI-Ilv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="230" y="6"/>
+            <point key="canvasLocation" x="214.50381679389312" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
