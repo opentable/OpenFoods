@@ -19,6 +19,13 @@ final class HomeFlowViewModel {
     
     private var foodItems: [FoodListItem]
     weak var coodinator: HomeFlowCoordinator?
+    
+    lazy var formatter: RelativeDateTimeFormatter = {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        formatter.locale = Calendar.current.locale
+        return formatter
+    }()
         
     init(foodItems: [FoodListItem] = [], coodinator: HomeFlowCoordinator? = nil) {
         self.foodItems = foodItems
@@ -57,9 +64,6 @@ final class HomeFlowViewModel {
     }
     
     func timeAgo(since date: Date = Date(), to toDate: Date) -> String {
-        let formatter = RelativeDateTimeFormatter()
-        formatter.unitsStyle = .full
-        formatter.locale = Calendar.current.locale
         return formatter.localizedString(for: toDate, relativeTo: date)
     }
 }
