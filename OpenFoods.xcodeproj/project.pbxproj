@@ -18,6 +18,10 @@
 		BA6FD6682AA21ECA00FED79B /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD6672AA21ECA00FED79B /* HomeTableViewController.swift */; };
 		BA6FD66A2AA21F2100FED79B /* HomeFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD6692AA21F2100FED79B /* HomeFlowCoordinator.swift */; };
 		BA6FD66C2AA222C400FED79B /* CoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD66B2AA222C400FED79B /* CoordinatorTests.swift */; };
+		BA6FD66F2AA2242000FED79B /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD66E2AA2242000FED79B /* Inject.swift */; };
+		BA6FD6712AA2249000FED79B /* InjectValue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD6702AA2249000FED79B /* InjectValue+Extension.swift */; };
+		BA6FD6732AA224E500FED79B /* FoodClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD6722AA224E500FED79B /* FoodClient.swift */; };
+		BA6FD6762AA2251D00FED79B /* Poppify in Frameworks */ = {isa = PBXBuildFile; productRef = BA6FD6752AA2251D00FED79B /* Poppify */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,9 @@
 		BA6FD6672AA21ECA00FED79B /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		BA6FD6692AA21F2100FED79B /* HomeFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFlowCoordinator.swift; sourceTree = "<group>"; };
 		BA6FD66B2AA222C400FED79B /* CoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorTests.swift; sourceTree = "<group>"; };
+		BA6FD66E2AA2242000FED79B /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
+		BA6FD6702AA2249000FED79B /* InjectValue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InjectValue+Extension.swift"; sourceTree = "<group>"; };
+		BA6FD6722AA224E500FED79B /* FoodClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6FD6762AA2251D00FED79B /* Poppify in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +108,7 @@
 		BA6FD6482AA2187700FED79B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				BA6FD66D2AA223D800FED79B /* Injection */,
 				BA6FD64C2AA21A4900FED79B /* Network */,
 				BA6FD64B2AA21A2900FED79B /* Protocols */,
 			);
@@ -138,6 +147,7 @@
 		BA6FD64C2AA21A4900FED79B /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				BA6FD6722AA224E500FED79B /* FoodClient.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -175,6 +185,15 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		BA6FD66D2AA223D800FED79B /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				BA6FD66E2AA2242000FED79B /* Inject.swift */,
+				BA6FD6702AA2249000FED79B /* InjectValue+Extension.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,6 +210,9 @@
 			dependencies = (
 			);
 			name = OpenFoods;
+			packageProductDependencies = (
+				BA6FD6752AA2251D00FED79B /* Poppify */,
+			);
 			productName = OpenTweet;
 			productReference = 009C4C681D9F0CD600F0BC6C /* OpenFoods.app */;
 			productType = "com.apple.product-type.application";
@@ -244,6 +266,9 @@
 				Base,
 			);
 			mainGroup = 009C4C5F1D9F0CD600F0BC6C;
+			packageReferences = (
+				BA6FD6742AA2251D00FED79B /* XCRemoteSwiftPackageReference "Poppify" */,
+			);
 			productRefGroup = 009C4C691D9F0CD600F0BC6C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,10 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6FD6712AA2249000FED79B /* InjectValue+Extension.swift in Sources */,
 				BA6FD66A2AA21F2100FED79B /* HomeFlowCoordinator.swift in Sources */,
+				BA6FD6732AA224E500FED79B /* FoodClient.swift in Sources */,
 				BA6FD6682AA21ECA00FED79B /* HomeTableViewController.swift in Sources */,
 				BA6FD6632AA21D7400FED79B /* AppCoordinator.swift in Sources */,
 				BA6FD6612AA21CEB00FED79B /* IBInstantiatable.swift in Sources */,
+				BA6FD66F2AA2242000FED79B /* Inject.swift in Sources */,
 				BA6FD65F2AA21C7000FED79B /* Coordinator.swift in Sources */,
 				009C4C6C1D9F0CD600F0BC6C /* AppDelegate.swift in Sources */,
 				BA6FD65D2AA21C1D00FED79B /* ClassName.swift in Sources */,
@@ -563,6 +591,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA6FD6742AA2251D00FED79B /* XCRemoteSwiftPackageReference "Poppify" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OccamsCode/Poppify";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA6FD6752AA2251D00FED79B /* Poppify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA6FD6742AA2251D00FED79B /* XCRemoteSwiftPackageReference "Poppify" */;
+			productName = Poppify;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 009C4C601D9F0CD600F0BC6C /* Project object */;
 }
