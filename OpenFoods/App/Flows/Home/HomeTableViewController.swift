@@ -60,7 +60,7 @@ extension HomeTableViewController: UITableViewDataSource {
         
         guard let cellItem = viewModel.item(at: indexPath) else { return cell }
         
-        cell.mainTitle.text = cellItem.name
+        cell.mainTitle.text = "\(cellItem.name), \(cellItem.countryOfOrigin)"
         cell.mainDescription.text = cellItem.description
         cell.dateUpdated.text = "Last updated: \(viewModel.timeAgo(to: cellItem.lastUpdatedDate))"
         return cell
