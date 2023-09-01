@@ -29,6 +29,7 @@
 		BA6FD6812AA22F3F00FED79B /* TableViewCellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD6802AA22F3F00FED79B /* TableViewCellReusable.swift */; };
 		BA6FD6832AA2347F00FED79B /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD6822AA2347F00FED79B /* HomeViewModelTests.swift */; };
 		BA6FD6852AA234F000FED79B /* MockObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD6842AA234F000FED79B /* MockObjects.swift */; };
+		BA6FD6872AA251E500FED79B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD6862AA251E500FED79B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		BA6FD6802AA22F3F00FED79B /* TableViewCellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellReusable.swift; sourceTree = "<group>"; };
 		BA6FD6822AA2347F00FED79B /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		BA6FD6842AA234F000FED79B /* MockObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockObjects.swift; sourceTree = "<group>"; };
+		BA6FD6862AA251E500FED79B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				BA6FD66D2AA223D800FED79B /* Injection */,
 				BA6FD64C2AA21A4900FED79B /* Network */,
 				BA6FD64B2AA21A2900FED79B /* Protocols */,
+				BA6FD6862AA251E500FED79B /* Extensions.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				BA6FD6682AA21ECA00FED79B /* HomeTableViewController.swift in Sources */,
 				BA6FD6632AA21D7400FED79B /* AppCoordinator.swift in Sources */,
 				BA6FD6612AA21CEB00FED79B /* IBInstantiatable.swift in Sources */,
+				BA6FD6872AA251E500FED79B /* Extensions.swift in Sources */,
 				BA6FD66F2AA2242000FED79B /* Inject.swift in Sources */,
 				BA6FD65F2AA21C7000FED79B /* Coordinator.swift in Sources */,
 				009C4C6C1D9F0CD600F0BC6C /* AppDelegate.swift in Sources */,

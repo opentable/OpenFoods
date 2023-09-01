@@ -63,7 +63,18 @@ extension HomeTableViewController: UITableViewDataSource {
         cell.mainTitle.text = "\(cellItem.name), \(cellItem.countryOfOrigin)"
         cell.mainDescription.text = cellItem.description
         cell.dateUpdated.text = "Last updated: \(viewModel.timeAgo(to: cellItem.lastUpdatedDate))"
+        cell.isLikedButton.setImage(imageForLiked(status: cellItem.isLiked), for: .normal)
+        cell.mainImageView.load(url: cellItem.photoURL)
         return cell
+    }
+    
+    func imageForLiked(status: Bool) -> UIImage? {
+        switch status {
+        case true:
+            return UIImage(systemName: "heart")
+        case false:
+            return UIImage(systemName: "heart.fill")
+        }
     }
 
 }
