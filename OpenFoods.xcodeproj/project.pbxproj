@@ -30,6 +30,7 @@
 		BA6FD6832AA2347F00FED79B /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD6822AA2347F00FED79B /* HomeViewModelTests.swift */; };
 		BA6FD6852AA234F000FED79B /* MockObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD6842AA234F000FED79B /* MockObjects.swift */; };
 		BA6FD6872AA251E500FED79B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD6862AA251E500FED79B /* Extensions.swift */; };
+		BA6FD6892AA2585200FED79B /* ScreenActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6FD6882AA2585200FED79B /* ScreenActivityIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		BA6FD6822AA2347F00FED79B /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		BA6FD6842AA234F000FED79B /* MockObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockObjects.swift; sourceTree = "<group>"; };
 		BA6FD6862AA251E500FED79B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BA6FD6882AA2585200FED79B /* ScreenActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenActivityIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				BA6FD67B2AA22ED300FED79B /* TableViewCells */,
 				009C4C6F1D9F0CD600F0BC6C /* Main.storyboard */,
 				009C4C741D9F0CD600F0BC6C /* LaunchScreen.storyboard */,
+				BA6FD6882AA2585200FED79B /* ScreenActivityIndicator.swift */,
 			);
 			path = UIs;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			files = (
 				BA6FD6812AA22F3F00FED79B /* TableViewCellReusable.swift in Sources */,
 				BA6FD6712AA2249000FED79B /* InjectValue+Extension.swift in Sources */,
+				BA6FD6892AA2585200FED79B /* ScreenActivityIndicator.swift in Sources */,
 				BA6FD66A2AA21F2100FED79B /* HomeFlowCoordinator.swift in Sources */,
 				BA6FD67E2AA22EF100FED79B /* FoodItemTableViewCell.swift in Sources */,
 				BA6FD6732AA224E500FED79B /* FoodClient.swift in Sources */,
