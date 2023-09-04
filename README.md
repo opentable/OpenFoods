@@ -70,7 +70,7 @@ This API will give you a list of foods. Sometimes this service can take awhile t
   "photoURL": "https://opentable-dex-ios-test-000000000000.herokuapp.com/images/soup.jpg",
   "description": "French onion soup is a soup usually based on meat stock and onions, and often served gratinéed with croutons or a larger piece of bread covered with cheese floating on top. Ancient in origin, the dish underwent a resurgence of popularity in the 1960s in the United States due to a greater interest in French cuisine. French onion soup may be served as a meal in itself or as an entrée.",
   "countryOfOrigin": "FR",
-  "lastUpdatedDate": "1970-01-01T00:00:00.000Z"
+  "lastUpdatedDate": "1970-01-01T00:00:00Z"
 }
 ```
 
